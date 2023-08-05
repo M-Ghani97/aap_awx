@@ -1,13 +1,13 @@
 ---
-hosts: localhost
-gather_facts: false
-tasks:
-- name: Build a schedule for Demo Job Template
-  schedule:
-    name: "sched1"
-    state: present
-    unified_job_template: "Demo Job Template"
-    rrule: "DTSTART:20191219T130551Z RRULE:FREQ=WEEKLY;INTERVAL=1;COUNT=1"
-    controller_password: 'letmein@123'
-    controller_username: 'admin'
-  register: result
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Build a schedule for Demo Job Template
+      schedule:
+        name: "sched1"
+        state: present
+        unified_job_template: "Demo Job Template"
+        rrule: "DTSTART:20191219T130551Z RRULE:FREQ=WEEKLY;INTERVAL=1;COUNT=1"
+        controller_password: 'letmein@123'
+        controller_username: 'admin'
+      register: result
