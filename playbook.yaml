@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
     - name: Build a schedule for Demo Job Template
-      schedule:
+      awx.awx.schedule:
         name: "sched1"
         state: present
         unified_job_template: "Demo Job Template"
