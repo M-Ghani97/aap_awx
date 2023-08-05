@@ -8,6 +8,7 @@
         state: present
         unified_job_template: "Demo Job Template"
         rrule: "DTSTART:20191219T130551Z RRULE:FREQ=WEEKLY;INTERVAL=1;COUNT=1"
+        controller_host: "aap.techive.cloud"
         controller_password: 'letmein@123'
         controller_username: 'admin'
       register: result
